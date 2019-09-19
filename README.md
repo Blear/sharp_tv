@@ -4,20 +4,29 @@ Home Assistant Components Sharp TV Remote
 夏普电视遥控app抓包写的HomeAssistant组件,电视关机后无法通信控制,所以采用HDMI CEC来控制电视的开机。
 
 使用前提：
+
 1.你的树莓派必须使用hdmi连接电视
 2.电视支持HDMI CEC (需要在电视设置中打开)
 3.已安装LIBCEC
 
 HDMI CEC组件官方文档：
+
 [https://www.home-assistant.io/components/hdmi_cec/](https://www.home-assistant.io/components/hdmi_cec/)
 
 如何查看是否支持HDMI CEC：
+
 在命令行中输入：echo scan | cec-client -s -d 1 
+
 前提是已安装LIBCEC,具体安装方法看上面的官方文档
+
 如果你和我一样是docker安装的hassio的话,那么不需要自己安装LIBCEC,因为hassio已经帮你安装好了,执行这个命令需要进入hassio容器内部。
+
+```
 $ docker ps  #查看容器
 $ docker exec -it 775c7c9ee1e1 /bin/bash #进入容器 775c7c9ee1e1是你的home-assistant的容器id
 $ echo scan | cec-client -s -d 1
+```
+
 执行返回：
 ```
 opening a connection to the CEC adapter...
