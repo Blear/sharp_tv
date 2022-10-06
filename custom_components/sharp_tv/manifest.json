@@ -1,8 +1,9 @@
 {
   "domain": "sharp_tv",
   "name": "sharp_tv",
+  "version": "1.0",
   "documentation": "https://github.com/Blear/sharp_tv",
   "requirements": [],
   "dependencies": [],
-  "codeowners": []
+  "codeowners": ["@Blear"]
 }
